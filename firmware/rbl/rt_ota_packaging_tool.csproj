@@ -1,0 +1,48 @@
+<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+  <PropertyGroup>
+    <AssemblyName>rt_ota_packaging_tool</AssemblyName>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <OutputType>WinExe</OutputType>
+    <UseWindowsForms>True</UseWindowsForms>
+    <TargetFramework>net452</TargetFramework>
+    <Prefer32Bit>True</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <LangVersion>Preview</LangVersion>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>app.ico</ApplicationIcon>
+    <RootNamespace />
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="rt_ota_packaging_tool.rtt_logo.png" />
+    <EmbeddedResource Include="rt_ota_packaging_tool.rtt_logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="rt_ota_packaging_tool.Firmware.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>rt_ota_packaging_tool.Firmware.resx</DependentUpon>
+    </Compile>
+    <Compile Update="rt_ota_packaging_tool.Properti.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>rt_ota_packaging_tool.Properti.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="rt_ota_packaging_tool.Firmware.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>rt_ota_packaging_tool.Firmware.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="rt_ota_packaging_tool.Properti.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>rt_ota_packaging_tool.Properti.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>
